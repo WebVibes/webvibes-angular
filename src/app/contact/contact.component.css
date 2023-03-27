@@ -1,0 +1,182 @@
+button {
+  font-size: 16px;
+}
+.primary-button {
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+  margin-right: 10px;
+  margin-top: 25px;
+  height: 46px;
+}
+.primary-button:hover {
+  transition: all 0.3s ease-in-out;
+  padding: 10px 30px;
+  margin-right: 0;
+}
+.form-label {
+  color: rgb(255, 255, 255);
+}
+.form-error-label {
+  font-size: 12px;
+}
+
+#contact-form > div {
+  margin-bottom: 5px;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 50px 0;
+}
+
+#contact-container {
+  background-color: #242424;
+  padding-top: 90px;
+  padding-bottom: 0px;
+}
+#contact {
+  padding-bottom: 10px;
+  display: flex;
+}
+.contact-title {
+  margin: auto 0;
+}
+.contact-title h1,
+.contact-title p {
+  color: #ffffff;
+  width: 90%;
+}
+.social-container {
+  display: flex;
+}
+.contact-social {
+  margin-right: 10px;
+}
+.contact-social a {
+  color: white;
+  border-radius: 50%;
+  border: 3px solid rgb(255, 255, 255);
+  padding: 10px;
+}
+.contact-social a:hover {
+  color: #ffffff;
+  border-radius: 50%;
+  border: 3px solid #7055d2;
+  background-color: #7055d2;
+  padding: 10px;
+  transition: 0.3s;
+}
+.fa-facebook-f {
+  padding: 0 3px;
+}
+#subscribe span {
+  font-size: smaller;
+}
+.form-select,
+.form-control,
+.subscribe-form-control {
+  border: none;
+  border-radius: 17px;
+  padding: 10px 15px;
+}
+.subscribe-form-control {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.subscribe-container-text {
+  width: 50%;
+  margin: 0 auto;
+}
+.label {
+  color: #ffffff;
+}
+
+.contact-email {
+  margin-bottom: 30px;
+}
+.contact-email a {
+  color: white;
+}
+.contact-email a:hover {
+  color: #7055d2;
+}
+#adatkezelesi-tajekoztato,
+#impresszum {
+  padding-bottom: 90px;
+}
+.email a,
+.contact-email a {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.email a::after,
+.contact-email a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 3px solid #7055d2;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+.email a:hover:after,
+.contact-email a:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.fa-brands {
+  margin: 0 3px;
+}
+.fa-instagram:before {
+  font-weight: bold;
+  font-size: large;
+}
+/* 992 pixel alatt */
+@media only screen and (max-width: 960px) {
+  #contact {
+    width: 100%;
+    max-width: calc(100% - 200px);
+    padding: 0 auto;
+    background-color: inherit;
+    box-shadow: none;
+    border-radius: 0;
+    background-image: none;
+    display: block;
+  }
+  .contact-content {
+    max-width: 100%;
+    margin-top: 50px;
+  }
+  .contact-title {
+    margin-bottom: 20px;
+  }
+  .contact-title h1,
+  .contact-title p {
+    width: 100%;
+  }
+}
+
+/* 600 pixel alatt */
+@media only screen and (max-width: 600px) {
+  #contact {
+    width: 100%;
+    max-width: calc(100% - 50px);
+    padding: 0 auto;
+  }
+}

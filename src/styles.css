@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 50px 0;
+}
+section > div {
+  margin: 30px 50px;
+  width: 100%;
+  max-width: 1270px;
+}
+
+/* 960 pixel alatt */
+@media only screen and (max-width: 960px) {
+  section > div {
+    width: 100%;
+    max-width: calc(100% - 200px);
+    padding: 0 auto;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: initial;
+    background-image: initial;
+  }
+}
+
+/* 600 pixel alatt */
+@media only screen and (max-width: 600px) {
+  section > div {
+    width: 100%;
+    max-width: calc(100% - 50px);
+    padding: 0 auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.2;
+  color: #313131;
+}
+h1,
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #313131;
+}
+p {
+  color: #727272;
+}
+h3 {
+  font-size: 35px;
+}
+h4 {
+  font-size: 26px;
+}
+@media only screen and (max-width: 1090px) {
+  h1,
+  h2 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  h1,
+  h2 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 16px;
+  }
+}

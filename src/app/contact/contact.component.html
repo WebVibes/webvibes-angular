@@ -1,0 +1,238 @@
+<section id="contact-container">
+  <div id="contact">
+    <div
+      fxLayout="row"
+      fxLayout.sm="column"
+      fxLayout.xs="column"
+      fxLayoutGap="25px"
+      fxLayoutAlign="center stretch"
+    >
+      <div
+        class="contact-title"
+        fxLayout="column"
+        fxLayoutAlign="center stretch"
+        fxFlex="50"
+        fxFlex.sm="100"
+        fxFlex.xs="100"
+      >
+        <h1>Készen állsz a közös munkára?</h1>
+        <p>
+          Írj nekünk az alábbi adatok kitöltésével és hamarosan felvesszük veled
+          a kapcsolatot.
+        </p>
+        <div class="mb-3">
+          <div class="contact-email">
+            <a href="mailto:info@webvibes.hu">info@webvibes.hu</a>
+          </div>
+          <div class="social-container">
+            <div class="contact-social">
+              <a
+                href="https://www.facebook.com/profile.php?id=100088891504552"
+                target="_blank"
+                class="social"
+              >
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+            <div class="contact-social">
+              <a
+                href="https://www.instagram.com/webvibescreatives/"
+                target="_blank"
+                class="social"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="contact-content"
+        fxLayout="column"
+        fxLayoutAlign="center stretch"
+        fxFlex="50"
+        fxFlex.sm="100"
+        fxFlex.xs="100"
+      >
+        <form
+          id="contact-form"
+          #contactForm="ngForm"
+          (ngSubmit)="invokeAWSAPI(contactForm)"
+        >
+          <div
+            fxLayout="row"
+            fxLayout.sm="column"
+            fxLayout.xs="column"
+            fxLayoutGap="{{ mobileQuery.matches ? '0px' : '25px' }}"
+            fxLayoutAlign="center stretch"
+            [style.marginbottom.px]="mobileQuery.matches ? 0 : 100"
+          >
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxFlex="50"
+              fxFlex.sm="100"
+              fxFlex.xs="100"
+            >
+              <mat-form-field appearance="outline">
+                <mat-label class="form-label">Teljes név</mat-label>
+                <input
+                  id="name"
+                  matInput
+                  placeholder=""
+                  [(ngModel)]="model.name"
+                  name="name"
+                  #name="ngModel"
+                  required
+                />
+                <mat-error class="form-error-label" *ngIf="name.invalid"
+                  >Név megadása kötelező</mat-error
+                >
+              </mat-form-field>
+            </div>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxFlex="50"
+              fxFlex.sm="100"
+              fxFlex.xs="100"
+            >
+              <mat-form-field appearance="outline">
+                <mat-label class="form-label">E-Mail</mat-label>
+                <input
+                  id="email"
+                  matInput
+                  placeholder=""
+                  [(ngModel)]="model.email"
+                  name="email"
+                  #email="ngModel"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  required
+                />
+                <mat-error
+                  class="form-error-label"
+                  *ngIf="email.invalid && email.errors?.required"
+                  >Email megadása kötelező</mat-error
+                >
+                <mat-error
+                  class="form-error-label"
+                  *ngIf="
+                    email.invalid &&
+                    !email.errors?.required &&
+                    email.errors?.pattern
+                  "
+                  >Érvénytelen email cím</mat-error
+                >
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div
+            fxLayout="row"
+            fxLayout.sm="column"
+            fxLayout.xs="column"
+            fxLayoutGap="{{ mobileQuery.matches ? '0px' : '25px' }}"
+            fxLayoutAlign="center stretch"
+            [style.marginbottom.px]="mobileQuery.matches ? 0 : 100"
+          >
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxFlex="50"
+              fxFlex.sm="100"
+              fxFlex.xs="100"
+            >
+              <mat-form-field appearance="outline">
+                <mat-label class="form-label">Telefonszám</mat-label>
+                <input
+                  id="phone"
+                  matInput
+                  placeholder=""
+                  [(ngModel)]="model.phone"
+                  name="phone"
+                  #phone="ngModel"
+                  required
+                />
+                <mat-error class="form-error-label" *ngIf="phone.invalid"
+                  >Telefonszám megadása kötelező</mat-error
+                >
+              </mat-form-field>
+            </div>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxFlex="50"
+              fxFlex.sm="100"
+              fxFlex.xs="100"
+            >
+              <mat-form-field appearance="outline">
+                <mat-label class="form-label">Miben segíthetünk?</mat-label>
+                <mat-select
+                  id="type"
+                  [(ngModel)]="model.type"
+                  name="type"
+                  #type="ngModel"
+                  required
+                >
+                  <mat-option value="weboldal">Weboldal készítés</mat-option>
+                  <mat-option value="webshop">Webshop készítés</mat-option>
+                  <mat-option value="logo">Logó és arculattervezés</mat-option>
+                </mat-select>
+                <mat-error class="form-error-label" *ngIf="type.invalid"
+                  >Válassz egyet a lehetőségek közül.</mat-error
+                >
+              </mat-form-field>
+            </div>
+          </div>
+          <div
+            fxLayout="row"
+            fxLayout.sm="column"
+            fxLayout.xs="column"
+            fxLayoutGap="{{ mobileQuery.matches ? '0px' : '25px' }}"
+            fxLayoutAlign="center stretch"
+            [style.marginbottom.px]="mobileQuery.matches ? 0 : 100"
+          >
+            <div fxLayout="column" fxLayoutAlign="center stretch" fxFlex="100">
+              <mat-form-field appearance="outline">
+                <mat-label class="form-label">Üzenet</mat-label>
+                <textarea
+                  id="message"
+                  [(ngModel)]="model.message"
+                  name="message"
+                  #message="ngModel"
+                  matInput
+                  placeholder="Írd le néhány mondatban az elképzeléseidet, céljaidat a weboldallal / webshoppal vagy arculattal kapcsolatban."
+                ></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+          <mat-checkbox
+            id="check"
+            [(ngModel)]="model.check"
+            name="check"
+            #check="ngModel"
+            matInput
+            >Az űrlap kitöltésével elfogadom az Adatvédelmi
+            Feltételeket.</mat-checkbox
+          >
+          <mat-error
+            class="form-error-label"
+            *ngIf="check.touched && !model.check"
+            >Fogadd el az adatvédelmi feltételeket az elküldéshez.</mat-error
+          >
+
+          <div class="col-12">
+            <button
+              type="submit"
+              class="primary-button"
+              mat-raised-button
+              color="primary"
+            >
+              Elküldöm
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

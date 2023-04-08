@@ -468,10 +468,6 @@ details p {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  .services-col-top {
-    padding-top: 15px;
-    text-align: center;
-  }
   /* Szolgáltatások */
 
   /* business */
@@ -522,11 +518,17 @@ details p {
     border-radius: 0;
     background-image: none;
   }
+  .offer-text > h1 {
+    color: #242424;
+  }
   /* Kinek ajánljuk */
 
   /* gyik */
   .gyik-header {
     margin-bottom: 30px;
+  }
+  #gyik > div {
+    margin-bottom: 20px;
   }
   /* gyik */
 

@@ -2,22 +2,20 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, Component } from '@angular/core';
 
 class Contact {
-
   constructor(
     public name: string,
     public email: string,
     public phone: string,
     public type: string,
     public message: string,
-    public check: boolean,
-  ) {  }
-
+    public check: boolean
+  ) {}
 }
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
   model = new Contact('', '', '', '', '', false);
@@ -26,24 +24,21 @@ export class ContactComponent {
 
   private _mobileQueryListener: () => void;
 
-  
   constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 960px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
-
-  
   invokeAWSAPI(form: any) {
     console.log(this.model);
     if (!this.model.check) {
-      Object.keys(form.controls).forEach(key => {
+      Object.keys(form.controls).forEach((key) => {
         form.controls[key].markAsTouched();
       });
       return;
     }
-    debugger;
+    debugger; // TODO
     // form = document.getElementById("contact-form");
     // if (form && !form.checkValidity()) {
     //   event.preventDefault();
@@ -84,5 +79,4 @@ export class ContactComponent {
     //   },
     // });
   }
- 
 }

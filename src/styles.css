@@ -88,3 +88,31 @@ h4 {
     font-size: 16px;
   }
 }
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.my-custom-snackbar {
+  margin: 0 !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  border-radius: 30px !important;
+}
+
+.my-custom-snackbar button {
+  background-color: #7055d2 !important;
+  color: white !important;
+  border-radius: 20px !important;
+  padding: 20px 25px !important;
+}
+.my-custom-snackbar > div {
+  border-radius: 20px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}

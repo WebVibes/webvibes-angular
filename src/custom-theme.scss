@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
 // Plus imports for other components in your app.
 
@@ -14,51 +13,60 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $indigo-palette: (
- 50: #EEEBFA,
- 100: #D4CCF2,
- 200: #B8AAE9,
- 300: #9B88E0,
- 400: #856FD9,
- 500: #7055D2,
- 600: #684ECD,
- 700: #5D44C7,
- 800: #533BC1,
- 900: #412AB6,
- contrast: (
-   50: rgba(black, 0.87),
-   100: rgba(black, 0.87),
-   200: rgba(black, 0.87),
-   300: white,
- )
+  50: #eeebfa,
+  100: #d4ccf2,
+  200: #b8aae9,
+  300: #9b88e0,
+  400: #856fd9,
+  500: #7055d2,
+  600: #684ecd,
+  700: #5d44c7,
+  800: #533bc1,
+  900: #412ab6,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+  ),
 );
 
 $webvibes-angular-primary: mat.define-palette($indigo-palette);
-$webvibes-angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$webvibes-angular-accent: mat.define-palette(
+  mat.$pink-palette,
+  A200,
+  A100,
+  A400
+);
 
 // The warn palette is optional (defaults to red).
 $webvibes-angular-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$webvibes-angular-theme: mat.define-light-theme((
-  color: (
-    primary: $webvibes-angular-primary,
-    accent: $webvibes-angular-accent,
-    warn: $webvibes-angular-warn,
+$webvibes-angular-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $webvibes-angular-primary,
+      accent: $webvibes-angular-accent,
+      warn: $webvibes-angular-warn,
+    ),
   )
-));
+);
 
-$webvibes-angular-dark-theme: mat.define-dark-theme((
-  color: (
-    primary: $webvibes-angular-primary,
-    accent: $webvibes-angular-accent,
-    warn: $webvibes-angular-warn,
+$webvibes-angular-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $webvibes-angular-primary,
+      accent: $webvibes-angular-accent,
+      warn: $webvibes-angular-warn,
+    ),
   )
-));
+);
 
 // had to use dark theme at form field and checkbox bc of visibility
 @include mat.all-component-themes($webvibes-angular-theme);
-@include mat.form-field-theme($webvibes-angular-dark-theme); 
+@include mat.form-field-theme($webvibes-angular-dark-theme);
 @include mat.checkbox-theme($webvibes-angular-dark-theme);
 @include mat.select-theme($webvibes-angular-dark-theme);
 @include mat.core-theme($webvibes-angular-dark-theme);
@@ -80,12 +88,14 @@ $webvibes-angular-dark-theme: mat.define-dark-theme((
 // caption	Smaller body and hint text.
 // button	Buttons and anchors.
 
-
 $typography-config-mobile: mat.define-typography-config(
   $font-family: '"Fira Sans", sans-serif',
-  $headline-1: mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),  
-  $headline-2: mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
-  $headline-3: mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+  $headline-1:
+    mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $headline-2:
+    mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $headline-3:
+    mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
   $headline-4: mat.define-typography-level(34px, 40px, 400),
   $headline-5: mat.define-typography-level(50px, 50px, 700, 1, -0.01em),
   $headline-6: mat.define-typography-level(40px, 40px, 700),
@@ -99,11 +109,15 @@ $typography-config-mobile: mat.define-typography-config(
 
 $typography-config-desktop: mat.define-typography-config(
   $font-family: '"Fira Sans", sans-serif',
-  $headline-1: mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),  
-  $headline-2: mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
-  $headline-3: mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+  $headline-1:
+    mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $headline-2:
+    mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $headline-3:
+    mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
   $headline-4: mat.define-typography-level(34px, 40px, 400),
-  $headline-5: mat.define-typography-level(50px, 50px, 700, $letter-spacing: -0.01em),
+  $headline-5:
+    mat.define-typography-level(50px, 50px, 700, $letter-spacing: -0.01em),
   $headline-6: mat.define-typography-level(40px, 40px, 700),
   $subtitle-1: mat.define-typography-level(36px, 36px, 700),
   $subtitle-2: mat.define-typography-level(32px, 32px, 600),
@@ -113,13 +127,18 @@ $typography-config-desktop: mat.define-typography-config(
   $button: mat.define-typography-level(16px, 24px, 400),
 );
 
-
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
   @include mat.typography-hierarchy($typography-config-mobile);
 }
 
-
-@media only screen and (min-width: 769px) { 
+@media only screen and (min-width: 769px) {
   @include mat.typography-hierarchy($typography-config-desktop);
 }
 
+.mat-mdc-snack-bar-container {
+  &.my-custom-snackbar {
+    --mdc-snackbar-container-color: white;
+    // --mat-mdc-snack-bar-button-color: #856fd9;
+    --mdc-snackbar-supporting-text-color: #313131;
+  }
+}

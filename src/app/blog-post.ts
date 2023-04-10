@@ -1,9 +1,10 @@
 export interface BlogPost {
-    id: number;
-    title: string;
-    slug: string;
-    path: string;
-    readMinutes: number;
-    date: string;
-    thumbnale: string;
+  id: number;
+  title: string;
+  description: string;
+  slug: string;
+  path: string;
+  readMinutes: number;
+  date: string;
+  thumbnale: string;
 }

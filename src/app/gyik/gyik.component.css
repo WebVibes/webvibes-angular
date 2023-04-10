@@ -20,8 +20,8 @@ section > div {
 }
 #expansion-panel {
   margin-top: 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(31, 45, 61, 0.125);
 }
 
 #expansion-panel p {

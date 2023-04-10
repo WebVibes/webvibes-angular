@@ -3674,7 +3674,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-typography .mat-h1,
   .mat-typography .mat-headline-5,
   .mat-typography h1 {
-    font: 700 50px / 50px 1;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    font-family: 1;
     letter-spacing: -0.01em;
     margin: 0 0 16px;
   }
@@ -3683,7 +3686,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-typography .mat-h2,
   .mat-typography .mat-headline-6,
   .mat-typography h2 {
-    font: 700 40px / 40px "Fira Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
     margin: 0 0 16px;
   }
@@ -3692,7 +3698,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-typography .mat-h3,
   .mat-typography .mat-subtitle-1,
   .mat-typography h3 {
-    font: 700 36px / 36px "Fira Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
     margin: 0 0 16px;
   }
@@ -3701,7 +3710,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-typography .mat-h4,
   .mat-typography .mat-body-1,
   .mat-typography h4 {
-    font: 400 16px / 24px "Fira Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
     margin: 0 0 16px;
   }
@@ -3721,7 +3733,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-subtitle-2,
   .mat-typography .mat-body-strong,
   .mat-typography .mat-subtitle-2 {
-    font: 600 32px / 32px "Fira Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
   }
   .mat-body,
@@ -3729,7 +3744,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-typography .mat-body,
   .mat-typography .mat-body-2,
   .mat-typography {
-    font: 400 16px / 24px "Fira Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
   }
   .mat-body p,
@@ -3743,30 +3761,45 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-caption,
   .mat-typography .mat-small,
   .mat-typography .mat-caption {
-    font: 400 16px / 24px "Fira Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
   }
   .mat-headline-1,
   .mat-typography .mat-headline-1 {
-    font: 300 112px / 112px "Fira Sans", sans-serif;
+    font-size: 112px;
+    font-weight: 300;
+    line-height: 112px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: -0.05em;
     margin: 0 0 56px;
   }
   .mat-headline-2,
   .mat-typography .mat-headline-2 {
-    font: 400 56px / 56px "Fira Sans", sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 56px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: -0.02em;
     margin: 0 0 64px;
   }
   .mat-headline-3,
   .mat-typography .mat-headline-3 {
-    font: 400 45px / 48px "Fira Sans", sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 48px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: -0.005em;
     margin: 0 0 64px;
   }
   .mat-headline-4,
   .mat-typography .mat-headline-4 {
-    font: 400 34px / 40px "Fira Sans", sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 40px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
     margin: 0 0 64px;
   }
@@ -3777,7 +3810,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-typography .mat-h1,
   .mat-typography .mat-headline-5,
   .mat-typography h1 {
-    font: 700 50px / 50px "Fira Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: -0.01em;
     margin: 0 0 16px;
   }
@@ -3786,7 +3822,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-typography .mat-h2,
   .mat-typography .mat-headline-6,
   .mat-typography h2 {
-    font: 700 40px / 40px "Fira Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
     margin: 0 0 16px;
   }
@@ -3795,7 +3834,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-typography .mat-h3,
   .mat-typography .mat-subtitle-1,
   .mat-typography h3 {
-    font: 700 36px / 36px "Fira Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 36px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
     margin: 0 0 16px;
   }
@@ -3804,7 +3846,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-typography .mat-h4,
   .mat-typography .mat-body-1,
   .mat-typography h4 {
-    font: 400 16px / 24px "Fira Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
     margin: 0 0 16px;
   }
@@ -3824,7 +3869,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-subtitle-2,
   .mat-typography .mat-body-strong,
   .mat-typography .mat-subtitle-2 {
-    font: 600 32px / 32px "Fira Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
   }
   .mat-body,
@@ -3832,7 +3880,10 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-typography .mat-body,
   .mat-typography .mat-body-2,
   .mat-typography {
-    font: 400 16px / 24px "Fira Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
   }
   .mat-body p,
@@ -3846,33 +3897,52 @@ select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) optio
   .mat-caption,
   .mat-typography .mat-small,
   .mat-typography .mat-caption {
-    font: 400 16px / 24px "Fira Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
   }
   .mat-headline-1,
   .mat-typography .mat-headline-1 {
-    font: 300 112px / 112px "Fira Sans", sans-serif;
+    font-size: 112px;
+    font-weight: 300;
+    line-height: 112px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: -0.05em;
     margin: 0 0 56px;
   }
   .mat-headline-2,
   .mat-typography .mat-headline-2 {
-    font: 400 56px / 56px "Fira Sans", sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 56px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: -0.02em;
     margin: 0 0 64px;
   }
   .mat-headline-3,
   .mat-typography .mat-headline-3 {
-    font: 400 45px / 48px "Fira Sans", sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 48px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: -0.005em;
     margin: 0 0 64px;
   }
   .mat-headline-4,
   .mat-typography .mat-headline-4 {
-    font: 400 34px / 40px "Fira Sans", sans-serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 40px;
+    font-family: "Fira Sans", sans-serif;
     letter-spacing: normal;
     margin: 0 0 64px;
   }
+}
+.mat-mdc-snack-bar-container.my-custom-snackbar {
+  --mdc-snackbar-container-color: white;
+  --mdc-snackbar-supporting-text-color: #313131;
 }
 
 /*# sourceMappingURL=custom-theme.css.map */

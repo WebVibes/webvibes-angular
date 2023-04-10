@@ -1,0 +1,131 @@
+#blog {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.blog-date {
+  color: #979797;
+}
+
+.blog-grid {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#blog a {
+  text-decoration: none;
+}
+.blog-grid .blog-img {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgb(31 45 61 / 13%);
+}
+
+.blog-banner {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.blog-post-banner {
+  margin: 20px auto;
+  width: 100%;
+}
+.blog-grid .blog-img .date {
+  background: #3a3973;
+  color: #ffffff;
+  padding: 8px 15px;
+  left: 0;
+  top: 10px;
+  font-size: 14px;
+}
+.blog-grid .blog-info {
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 20px;
+  margin: -30px 20px 0;
+  position: relative;
+  height: 200px;
+}
+
+#blog h2 {
+  margin: 20px 0 50px 0;
+}
+
+.blog-grid .blog-info h5,
+.side-blog h5 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 20px 10px;
+  color: #313131;
+}
+.blog-grid .blog-info h5 a {
+  color: #313131;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-card-header {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.blog-date {
+  margin-left: 10px;
+  padding-top: 10px;
+}
+.blog-card-img {
+  height: 24px;
+  margin: 0 10px;
+}
+.blog-grid p {
+  font-weight: lighter;
+  color: #3a3973;
+  font-size: 16px;
+}
+.blog-title {
+  padding-top: 50px;
+}
+
+.blog-grid .blog-info:hover {
+  box-shadow: 0px 2px 20px 5px rgba(146, 62, 255, 0.38);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 992 pixel alatt */
+@media only screen and (max-width: 992px) {
+  .post-left {
+    box-shadow: none;
+  }
+  .post-right {
+    padding: 0 20px;
+  }
+  #blog-post .container-sm {
+    padding: 0;
+  }
+  .blog-title {
+    padding-top: 80px;
+  }
+  #blog {
+    padding-top: 0px;
+  }
+  .blog-post-date {
+    margin-top: 100px;
+  }
+  .blog-post-banner {
+    width: 100%;
+  }
+  .blog-text {
+    width: 100%;
+    margin: 60px auto;
+  }
+  #blog-post {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .blog-grid {
+    width: 95%;
+    margin: 15px auto;
+  }
+  #blog h2 {
+    margin: 0 0 40px 0;
+  }
+}

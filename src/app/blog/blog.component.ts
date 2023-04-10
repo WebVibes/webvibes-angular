@@ -9,6 +9,7 @@ import { BlogService } from '../blog.service';
 })
 export class BlogComponent {
   blogPosts: BlogPost[] = [];
+  threePostsCount: Array<number> = Array();
 
   constructor(private blogService: BlogService) {
 
@@ -21,7 +22,11 @@ export class BlogComponent {
 
   getBlogPosts(): void {
     this.blogService.getBlogPosts().subscribe(
-      blogPosts => this.blogPosts = blogPosts
+      blogPosts => {
+        this.blogPosts = blogPosts;
+        this.threePostsCount = Array.from(Array(Math.ceil(blogPosts.length / 3)).keys());
+        console.log(this.threePostsCount);
+      }
     );
   }
 }

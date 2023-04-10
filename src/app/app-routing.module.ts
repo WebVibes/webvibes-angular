@@ -19,10 +19,7 @@ const routes: Routes = [
   { path: 'webshop', component: WebshopComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactPageComponent },
-  { path: 'blog-post/:id', component: BlogPostComponent },
-  // { path: 'detail/:id', component: HeroDetailComponent },
-  // { path: 'heroes', component: HeroesComponent },
-  // { path: 'dashboard', component: DashboardComponent},
+  { path: 'blog/:slug', component: BlogPostComponent },
 ];
 
 @NgModule({

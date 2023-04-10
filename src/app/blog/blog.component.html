@@ -1,28 +1,26 @@
-<!-- Blog -->
-<ul class="heroes">
-  <li *ngFor="let blogPost of blogPosts">
-    <a routerLink="/blog-post/{{ blogPost.id }}">
-      <span class="badge">{{ blogPost.id }}</span> {{ blogPost.name }}
-    </a>
-  </li>
-</ul>
 <section id="blog">
   <div>
     <h1 class="blog-title">Blog</h1>
     <div
+      *ngFor="let i of threePostsCount"
       fxLayout="row"
       fxLayout.sm="column"
       fxLayout.xs="column"
       fxLayoutGap="25px"
       fxLayoutAlign="center stretch"
     >
-      <div fxFlex="25" fxFlex.sm="100" fxFlex.xs="100" class="services-col">
-        <a href="miert-van-szukseg-briefre.html">
+      <div
+        *ngFor="let blogPost of blogPosts | slice : i * 3 : (i + 1) * 3"
+        fxFlex="33.3"
+        fxFlex.sm="100"
+        fxFlex.xs="100"
+      >
+        <a [routerLink]="['/blog', blogPost.slug]">
           <div class="blog-grid">
             <div class="blog-img">
               <img
                 class="blog-banner"
-                src="img/brief.webp"
+                src="{{ blogPost.thumbnale }}"
                 alt="mi az a brief?"
               />
             </div>
@@ -30,139 +28,15 @@
               <div class="blog-date">
                 <p>2023.02.23.</p>
               </div>
-              <h5>Miért van szükség briefre?</h5>
+              <h5>{{ blogPost.title }}</h5>
               <div class="blog-card-header">
-                <img src="img/date.svg" class="blog-card-img" alt="óra" />
+                <img
+                  src="assets/img/date.svg"
+                  class="blog-card-img"
+                  alt="óra"
+                />
                 <div class="blog-card-title">
                   <p>4 perc</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div fxFlex="25" fxFlex.sm="100" fxFlex.xs="100" class="services-col">
-        <a href="chatgpt.html">
-          <div class="blog-grid">
-            <div class="blog-img">
-              <img
-                class="blog-banner"
-                src="img/chatgpt.webp"
-                alt="Miért jó befektetés egy weboldal?"
-              />
-            </div>
-            <div class="blog-info">
-              <div class="blog-date">
-                <p>2023.02.06.</p>
-              </div>
-              <h5>ChatGPT, mit kell tudni róla?</h5>
-              <div class="blog-card-header">
-                <img src="img/date.svg" class="blog-card-img" alt="óra" />
-                <div class="blog-card-title">
-                  <p>8 perc</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div fxFlex="25" fxFlex.sm="100" fxFlex.xs="100" class="services-col">
-        <a href="weboldal-koltsegek.html">
-          <div class="blog-grid">
-            <div class="blog-img">
-              <img
-                class="blog-banner"
-                src="img/weboldal-koltsegei.webp"
-                alt="Miért jó befektetés egy weboldal?"
-              />
-            </div>
-            <div class="blog-info">
-              <div class="blog-date">
-                <p>2023.01.26.</p>
-              </div>
-              <h5>Milyen költségekkel jár egy weboldal?</h5>
-              <div class="blog-card-header">
-                <img src="img/date.svg" class="blog-card-img" alt="óra" />
-                <div class="blog-card-title">
-                  <p>6 perc</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div fxFlex="25" fxFlex.sm="100" fxFlex.xs="100" class="services-col">
-        <a href="igy-kerj-arajanlatot.html">
-          <div class="blog-grid">
-            <div class="blog-img">
-              <img
-                class="blog-banner"
-                src="img/hogyan-kerj-arajanlatot.webp"
-                alt="Hogyan kérj árajánlatot?"
-              />
-            </div>
-            <div class="blog-info">
-              <div class="blog-date">
-                <p>2023.01.16.</p>
-              </div>
-              <h5>Hogyan kérj árajánlatot?</h5>
-              <div class="blog-card-header">
-                <img src="img/date.svg" class="blog-card-img" alt="óra" />
-                <div class="blog-card-title">
-                  <p>2 perc</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div fxFlex="25" fxFlex.sm="100" fxFlex.xs="100" class="services-col">
-        <a href="weboldal-befektetes.html">
-          <div class="blog-grid">
-            <div class="blog-img">
-              <img
-                class="blog-banner"
-                src="img/weboldal-befektetes.webp"
-                alt="Miért jó befektetés egy weboldal?"
-              />
-            </div>
-            <div class="blog-info">
-              <div class="blog-date">
-                <p>2023.01.10.</p>
-              </div>
-              <h5>Miért jó befektetés egy weboldal?</h5>
-              <div class="blog-card-header">
-                <img src="img/date.svg" class="blog-card-img" alt="óra" />
-                <div class="blog-card-title">
-                  <p>3 perc</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div fxFlex="25" fxFlex.sm="100" fxFlex.xs="100" class="services-col">
-        <a href="weboldal-elkeszitese-lepesrol-lepesre.html">
-          <div class="blog-grid">
-            <div class="blog-img">
-              <img
-                class="blog-banner"
-                src="img/igy-keszul-el-egy-weboldal.webp"
-                alt="Weboldal elkészítése lépésről lépésre"
-              />
-            </div>
-            <div class="blog-info">
-              <div class="blog-date">
-                <p>2023.01.05.</p>
-              </div>
-              <h5>Így készül egy weboldal</h5>
-              <div class="blog-card-header">
-                <img src="img/date.svg" class="blog-card-img" alt="óra" />
-                <div class="blog-card-title">
-                  <p>5 perc</p>
                 </div>
               </div>
             </div>

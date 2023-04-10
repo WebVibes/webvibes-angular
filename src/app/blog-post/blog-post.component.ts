@@ -1,54 +1,46 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild, ViewEncapsulation } from '@angular/core';
 import { BlogService } from '../blog.service';
 import { ActivatedRoute } from '@angular/router';
 import { BlogPost } from '../blog-post';
-import { Observable } from 'rxjs';
-import { SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-blog-post',
   templateUrl: './blog-post.component.html',
-  styleUrls: ['./blog-post.component.css']
+  styleUrls: ['./blog-post.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
-export class BlogPostComponent {
-  @ViewChild('simpleDiv', { static: true }) simple?: ElementRef<HTMLElement>;
-  
+export class BlogPostComponent implements AfterViewInit {
   @Input() blogPost?: BlogPost;
-  innerHtmlString?: SafeHtml;
-
-  @ViewChild('foo', {static: true}) foo?: SafeHtml;
+  blogContent;
 
   constructor(
     private route: ActivatedRoute,
     private blogService: BlogService,
+    private http:HttpClient,
+    private sanitizer:DomSanitizer
   ) {
-
   }
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.getBlogPost(id);
+    const slug = this.route.snapshot.paramMap.get('slug');
+    this.getBlogPost(slug);
   }
 
   ngAfterViewInit() {
-    this.simple!.nativeElement.innerHTML = 'AAA';
+    console.log(this.blogPost);
+    this.http.get(this.blogPost!.path,{responseType:'text'}).subscribe(res=>{
+      this.blogContent = this.sanitizer.bypassSecurityTrustHtml(res);
+    })
   }
 
-  getBlogPost(id: number): void {
-    this.blogService.getBlogPost(id).subscribe(
+  getBlogPost(slug: any): void {
+    this.blogService.getBlogPost(slug).subscribe(
       blogPost => {
         this.blogPost = blogPost;
-        this.getBlogContent(blogPost.path);
       }
     );
   }
 
-  public getBlogContent(path: string): void {
-    this.blogService.getBlogPostContent(path).subscribe(
-      content => {
-        this.foo=content;
-      }
-    );
-    console.log(this.innerHtmlString);
-  }
 }

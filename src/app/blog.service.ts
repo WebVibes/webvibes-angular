@@ -9,34 +9,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BlogService {
-
-
-  constructor(
-    private readonly http: HttpClient,
-    private readonly sanitizer: DomSanitizer
-  ) {}
   
   getBlogPosts(): Observable<BlogPost[]> {
     const heroes = of(BLOGPOSTS)
     return heroes;
   }
 
-  getBlogPost(id: number): Observable<BlogPost> {
-    const blogPost = BLOGPOSTS.find(b => b.id === id)!;
+  getBlogPost(slug: any): Observable<BlogPost> {
+    // TODO not found
+    const blogPost = BLOGPOSTS.find(b => b.slug === slug)!;
     return of(blogPost);
   }
 
-  getBlogPostContent(path: string): Observable<SafeHtml> {
-    // https://stackoverflow.com/questions/68970386/use-html-link-in-innerhtml-to-display-that-file-in-angular
-    const headers = new HttpHeaders({
-      'Content-Type':  'text/plain',
-    });
-    return this.http.get(path, {
-      headers,
-      responseType: 'text'
-    }).pipe(
-      // This is unsafe if the path and content is not under your control
-      map(html => this.sanitizer.bypassSecurityTrustHtml(html))
-    );
-  }
 }

@@ -1,6 +1,117 @@
-<div *ngIf="blogPost">
-    <!-- <div [innerHTML]="innerHtmlString | async"></div> -->
-    <!-- <div #simpleDiv></div> -->
-    <div #simpleDiv>Am I here?</div>
-    <div #foo>Am I here?</div>
-</div>
+<section id="blog-post">
+  <div
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutGap="25px"
+    fxLayoutAlign="center stretch"
+  >
+    <div
+      fxFlex="66.6"
+      fxFlex.sm="100"
+      fxFlex.xs="100"
+      class="post-left"
+      [innerHtml]="blogContent"
+    ></div>
+    <div fxFlex="66.6" fxFlex.sm="100" fxFlex.xs="100" class="post-right">
+      <div class="container-sm">
+        <div class="subscribe-container">
+          <h3>Iratkozz fel!</h3>
+          <p>
+            Iratkozz fel, hogy elsőként értesülj minden aktualitásunkról és új
+            blog bejegyzésünkről.
+          </p>
+          <input
+            type="email"
+            class="subscribe-form-control"
+            id="email"
+            value=""
+            placeholder="E-mail"
+            required
+          />
+          <div class="invalid-feedback">Érvényes email címet adj meg.</div>
+          <span
+            ><p>
+              Az űrlap kitöltésével elfogadod az Adatvédelmi Feltételeket.
+            </p></span
+          >
+          <div class="blog-btn">
+            <button type="submit" class="btn btn-primary">Feliratkozom</button>
+          </div>
+        </div>
+
+        <div class="segedlet">
+          <h3>Ingyenes tárhely segédlet</h3>
+          <ul>
+            <li>Mi az a domain és hogyan épül fel?</li>
+            <li>Mekkora tárhelyre van szükséged?</li>
+            <li>Hogyan bérelj tárhelyet?</li>
+            <li>
+              Milyen faktorokat vegyél figyelembe, amikor kiválasztod a
+              tárhelyet?
+            </li>
+          </ul>
+          <div class="primary-button blog-button-container">
+            <button
+              class="blog-button"
+              href="tarhely-segedlet.html"
+              mat-raised-button
+              color="primary"
+            >
+              Kérem
+            </button>
+          </div>
+        </div>
+        <div class="side-blog">
+          <a href="https://www.instagram.com/webvibescreatives/">
+            <div class="follow">
+              <img src="/assets/img/kovess-instagram.webp" />
+            </div>
+            <h3>Kövess be instán is</h3>
+            <p>
+              Az Instán olyan egyedi tartalmak is felkerülnek, amelyekkel itt a
+              weboldalon nem találkozhatsz. Kövess be:
+              <span>@webvibescreatives</span>
+            </p>
+          </a>
+        </div>
+        <div class="side-blog">
+          <h3>Nézd meg további bejegyzéseinket is</h3>
+          <div class="col-lg-12 lazy-load">
+            <a href="miert-van-szukseg-briefre.html">
+              <div class="blog-grid">
+                <div class="blog-img">
+                  <img
+                    class="blog-banner"
+                    src="/assets/img/brief.webp"
+                    alt="mi az a brief?"
+                  />
+                </div>
+
+                <div class="blog-date">
+                  <p>2023.02.23.</p>
+                </div>
+                <h5>Miért van szükség briefre?</h5>
+                <div class="blog-card-header">
+                  <img
+                    src="/assets/img/date.svg"
+                    class="blog-card-img"
+                    alt="óra"
+                  />
+                  <div class="blog-card-title">
+                    <p>4 perc</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="blog-btn">
+            <a class="btn btn-primary" href="blog.html" role="button"
+              >Összes megtekintése
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

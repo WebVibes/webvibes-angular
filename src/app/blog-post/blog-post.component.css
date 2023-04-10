@@ -1,0 +1,294 @@
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.blog-button-container {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.blog-button {
+  background-color: white;
+  color: #7055d2;
+  border: 2px solid #7055d2;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+  margin-right: 10px !important;
+}
+
+.blog-button:hover {
+  transition: all 0.3s ease-in-out;
+  padding: 10px 30px;
+  margin-right: 0 !important;
+}
+.blog-button a {
+  color: #7055d2;
+}
+.post-left {
+  box-shadow: 0 3px 30px rgb(0 0 0 / 8%);
+  border-radius: 25px;
+  margin-right: 10px;
+  padding: 0 20px;
+}
+
+.post-right a {
+  text-decoration: none;
+}
+.post-right h3 {
+  font-weight: bold;
+}
+.blog-post-img {
+  margin: 20px 0;
+  /*filter: drop-shadow(0px 10px 50px rgba(151, 151, 151, 0.25));*/
+}
+.blog-text {
+  width: 100%;
+  margin: 40px auto;
+}
+.blog-text h4 {
+  font-weight: bold;
+}
+
+.blog-date {
+  color: #979797;
+}
+
+.blog-grid {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#blog a {
+  text-decoration: none;
+}
+.segedlet {
+  background: url("/assets/img/minta.png"),
+    radial-gradient(50% 50% at 50% 50%, #866be8 0%, #7055d2 100%);
+}
+.segedlet h3,
+.segedlet ul li {
+  color: white;
+  text-align: center;
+}
+.side-blog,
+.segedlet {
+  box-shadow: 0 3px 30px rgb(0 0 0 / 8%);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.side-blog span,
+.blog-text a {
+  font-weight: bold;
+  color: #7055d2;
+}
+.side-blog .blog-date {
+  margin-left: 0;
+  margin-top: 10px;
+}
+.side-blog .blog-card-img {
+  margin-top: 0;
+  margin-left: 0;
+}
+.side-blog .blog-btn,
+.segedlet .blog-btn {
+  padding-top: 0;
+}
+.side-blog:hover {
+  box-shadow: 0px 2px 20px 5px rgba(146, 62, 255, 0.38);
+  transition: all 0.3s ease-in-out;
+}
+.follow img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+.blog-grid .blog-img {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgb(31 45 61 / 13%);
+}
+#tarhely-page #contact {
+  box-shadow: 0 3px 30px rgb(0 0 0 / 8%);
+  border-radius: 25px;
+  margin-right: 10px;
+  padding: 0 20px;
+  margin-bottom: 100px;
+  backdrop-filter: blur(20px);
+  border: solid 4px white;
+}
+
+#tarhely-page .post-left {
+  box-shadow: none;
+  margin: auto 0;
+}
+#tarhely-page {
+  background: url("/assets//img/tarhely-segedlet-poszt.png");
+  background-size: cover;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 200px;
+}
+#tarhely-page .blog-img {
+  align-items: center;
+}
+#tarhely-page .blog-text {
+  width: 60%;
+}
+
+.blog-banner {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.blog-post-banner {
+  margin: 20px auto;
+  width: 100%;
+}
+.blog-grid .blog-img .date {
+  background: #3a3973;
+  color: #ffffff;
+  padding: 8px 15px;
+  left: 0;
+  top: 10px;
+  font-size: 14px;
+}
+.blog-grid .blog-info {
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 20px;
+  margin: -30px 20px 0;
+  position: relative;
+  height: 200px;
+}
+
+#blog h2 {
+  margin: 20px 0 50px 0;
+}
+
+.blog-grid .blog-info h5,
+.side-blog h5 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 20px 10px;
+  color: #313131;
+}
+
+.side-blog h5 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 20px 0;
+  color: #313131;
+}
+.blog-grid .blog-info h5 a {
+  color: #313131;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blog-card-header {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.blog-date {
+  margin-left: 10px;
+  padding-top: 10px;
+}
+.blog-card-img {
+  height: 24px;
+  margin: 0 10px;
+}
+.blog-grid p {
+  font-weight: lighter;
+  color: #3a3973;
+  font-size: 16px;
+}
+.blog-title {
+  padding-top: 50px;
+}
+
+#subscribe {
+  /*margin-bottom: 100px; */
+  padding-top: 20px;
+}
+#subscribe .subscribe-container {
+  border-radius: 70px;
+  padding: 50px 0;
+  box-shadow: 0px 10px 40px #b3b3b3;
+}
+.subscribe-container {
+  background: url("/assets/img/minta.png"),
+    radial-gradient(50% 50% at 50% 50%, #1fca9f 0%, #0dbd91 100%);
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgb(31 45 61 / 27%);
+  padding: 30px;
+  margin-bottom: 30px;
+  display: none;
+}
+
+.subscribe-container .blog-btn {
+  padding-top: 10px;
+}
+.panel-container small {
+  font-size: 0.75em;
+  line-height: 10px;
+  opacity: 0.5;
+  color: white;
+}
+.subscribe-container h3,
+.subscribe-container p,
+#tarhely-page h1,
+#tarhely-page p,
+#tarhely-page h4,
+#tarhely-page ul li {
+  color: white;
+  text-align: center;
+}
+
+/* 992 pixel alatt */
+@media only screen and (max-width: 992px) {
+  .post-left {
+    box-shadow: none;
+  }
+  .post-right {
+    padding: 0 20px;
+  }
+  #blog-post .container-sm {
+    padding: 0;
+  }
+  .blog-title {
+    padding-top: 80px;
+  }
+  #blog {
+    padding-top: 0px;
+  }
+  .blog-post-date {
+    margin-top: 100px;
+  }
+  .blog-post-banner {
+    width: 100%;
+  }
+  .blog-text {
+    width: 100%;
+    margin: 60px auto;
+  }
+  #blog-post {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .blog-grid {
+    width: 95%;
+    margin: 15px auto;
+  }
+  #blog h2 {
+    margin: 0 0 40px 0;
+  }
+}

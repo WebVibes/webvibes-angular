@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 import { BlogPost } from '../blog-post';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { BLOGPOSTS } from '../blog-posts';
 
 @Component({
   selector: 'app-blog-post',
@@ -21,6 +22,7 @@ import { HttpClient } from '@angular/common/http';
 export class BlogPostComponent implements AfterViewInit {
   @Input() blogPost?: BlogPost;
   blogContent;
+  randomBlogPost?: BlogPost;
 
   constructor(
     private route: ActivatedRoute,
@@ -45,6 +47,10 @@ export class BlogPostComponent implements AfterViewInit {
   getBlogPost(slug: any): void {
     this.blogService.getBlogPost(slug).subscribe((blogPost) => {
       this.blogPost = blogPost;
+      // get a random post
+      let excludedBlogPosts = BLOGPOSTS.filter((x) => x.id != blogPost.id);
+      this.randomBlogPost =
+        excludedBlogPosts[Math.floor(Math.random() * excludedBlogPosts.length)];
     });
   }
 }

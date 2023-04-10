@@ -51,7 +51,7 @@
               tárhelyet?
             </li>
           </ul>
-          <div class="primary-button blog-button-container">
+          <div class="blog-button-container">
             <button
               id="blog-button"
               href="tarhely-segedlet.html"
@@ -78,20 +78,20 @@
         <div class="side-blog">
           <h3>Nézd meg további bejegyzéseinket is</h3>
           <div class="col-lg-12 lazy-load">
-            <a href="miert-van-szukseg-briefre.html">
+            <a routerLink="/blog/{{ randomBlogPost?.slug }}">
               <div class="blog-grid">
                 <div class="blog-img">
                   <img
                     class="blog-banner"
-                    src="/assets/img/brief.webp"
+                    src="{{ randomBlogPost?.thumbnale }}"
                     alt="mi az a brief?"
                   />
                 </div>
 
                 <div class="blog-date">
-                  <p>2023.02.23.</p>
+                  <p>{{ randomBlogPost?.date }}</p>
                 </div>
-                <h5>Miért van szükség briefre?</h5>
+                <h5>{{ randomBlogPost?.title }}</h5>
                 <div class="blog-card-header">
                   <img
                     src="/assets/img/date.svg"
@@ -99,20 +99,20 @@
                     alt="óra"
                   />
                   <div class="blog-card-title">
-                    <p>4 perc</p>
+                    <p>{{ randomBlogPost?.readMinutes }} perc</p>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="primary-button blog-button-container">
+          <div class="blog-button-container">
             <button
               id="blog-button"
               routerLink="/blog"
               mat-raised-button
               color="primary"
             >
-            Összes megtekintése
+              Összes megtekintése
             </button>
           </div>
         </div>

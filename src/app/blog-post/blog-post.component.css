@@ -7,7 +7,6 @@ li {
 }
 
 .blog-button-container {
-  padding-top: 30px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -18,18 +17,16 @@ li {
   color: #7055d2;
   border: 2px solid #7055d2;
   border-radius: 30px;
-  padding: 10px 25px;
+  padding: 10px 25px !important;
   transition: all 0.3s ease-in-out;
   font-weight: 700;
   margin-right: 10px !important;
+  height: 46px;
 }
 #blog-button:hover {
   transition: all 0.3s ease-in-out;
-  padding: 10px 30px;
+  padding: 10px 30px !important;
   margin-right: 0 !important;
-}
-#blog-button a {
-  color: #7055d2;
 }
 .post-left {
   box-shadow: 0 3px 30px rgb(0 0 0 / 8%);
@@ -178,13 +175,6 @@ li {
   font-size: 22px;
   font-weight: 500;
   margin: 20px 10px;
-  color: #313131;
-}
-
-.side-blog h5 {
-  font-size: 22px;
-  font-weight: 500;
-  margin: 20px 0;
   color: #313131;
 }
 .blog-grid .blog-info h5 a {

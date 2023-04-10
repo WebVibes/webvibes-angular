@@ -9,6 +9,7 @@ import { WebshopComponent } from './webshop/webshop.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { ImpresszumComponent } from './impresszum/impresszum.component';
 import { AdatkezelesComponent } from './adatkezeles/adatkezeles.component';
+import { HostingTutorialComponent } from './hosting-tutorial/hosting-tutorial.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -111,6 +112,16 @@ const routes: Routes = [
       description: 'Web Vibes adatkezelési tájékoztató',
       ogDescription: 'Web Vibes adatkezelési tájékoztató',
       robots: 'noindex, nofollow',
+    },
+  },
+  {
+    path: 'tarhely-segedlet',
+    component: HostingTutorialComponent,
+    data: {
+      title: 'Tárhely segédlet',
+      ogTitle: 'Tárhely segédlet',
+      description: '', // TODO
+      ogDescription: '',
     },
   },
 ];

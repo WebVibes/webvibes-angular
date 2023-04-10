@@ -30,7 +30,6 @@ export class AnalyticsService {
           page: e.label,
         });
       } else if (e.type === 'EVENT') {
-        debugger;
         ga('send', {
           hitType: 'event',
           eventCategory: e.category,

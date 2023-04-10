@@ -15,7 +15,7 @@
         fxFlex.sm="100"
         fxFlex.xs="100"
       >
-        <a [routerLink]="['/blog', blogPost.slug]">
+        <a routerLink="/blog/{{ blogPost.slug }}">
           <div class="blog-grid">
             <div class="blog-img">
               <img

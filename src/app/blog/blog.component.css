@@ -1,3 +1,22 @@
+section {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 50px 0;
+}
+section > div {
+  margin: 30px 50px;
+  width: 100%;
+  max-width: 1270px;
+}
+.blog-title {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 #blog {
   padding-top: 80px;
   padding-bottom: 80px;

@@ -13,7 +13,7 @@ li {
   flex-direction: column;
   text-align: center;
 }
-.blog-button {
+#blog-button {
   background-color: white;
   color: #7055d2;
   border: 2px solid #7055d2;
@@ -23,13 +23,12 @@ li {
   font-weight: 700;
   margin-right: 10px !important;
 }
-
-.blog-button:hover {
+#blog-button:hover {
   transition: all 0.3s ease-in-out;
   padding: 10px 30px;
   margin-right: 0 !important;
 }
-.blog-button a {
+#blog-button a {
   color: #7055d2;
 }
 .post-left {

@@ -1,5 +1,8 @@
 import { MediaMatcher } from '@angular/cdk/layout';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ChangeDetectorRef, Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Observable, catchError } from 'rxjs';
 
 class Contact {
   constructor(
@@ -11,6 +14,12 @@ class Contact {
     public check: boolean
   ) {}
 }
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json; charset=utf-8',
+  }),
+};
 
 @Component({
   selector: 'app-contact',
@@ -24,59 +33,70 @@ export class ContactComponent {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher,
+    private http: HttpClient,
+    private _snackBar: MatSnackBar
+  ) {
     this.mobileQuery = media.matchMedia('(max-width: 960px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
+  postForm(data: any): Observable<any> {
+    return this.http.post<any>(
+      'https://22ncmi5gxh.execute-api.eu-central-1.amazonaws.com/WebVibesStage/webvibes-contact-form',
+      data,
+      httpOptions
+    );
+  }
+
+  openSnackbar(text: string, isSuccess: boolean) {
+    this._snackBar.open(text, '', {
+      duration: isSuccess ? 10000 : 20000,
+      panelClass: isSuccess
+        ? 'contact-success-snackbar'
+        : 'contact-error-snackbar',
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+    });
+  }
+
   invokeAWSAPI(form: any) {
-    console.log(this.model);
+    if (!form.valid) {
+      return;
+    }
     if (!this.model.check) {
       Object.keys(form.controls).forEach((key) => {
         form.controls[key].markAsTouched();
       });
       return;
     }
-    debugger; // TODO
-    // form = document.getElementById("contact-form");
-    // if (form && !form.checkValidity()) {
-    //   event.preventDefault();
-    //   event.stopPropagation();
-    //   form.classList.add("was-validated");
-    //   return;
-    // }
-    // event.preventDefault();
-    // var name = $("#name").val();
-    // var email = $("#email").val();
-    // var phone = $("#phone").val();
-    // var type = $("#type").val();
-    // var msg = $("#msg").val();
-    // var data = {
-    //   name: name,
-    //   email: email,
-    //   phone: phone,
-    //   type: type,
-    //   msg: msg,
-    // };
-    // $.ajax({
-    //   type: "POST",
-    //   url: "https://22ncmi5gxh.execute-api.eu-central-1.amazonaws.com/WebVibesStage/webvibes-contact-form",
-    //   dataType: "json",
-    //   crossDomain: "true",
-    //   contentType: "application/json; charset=utf-8",
-    //   data: JSON.stringify(data),
-    //   success: function () {
-    //     document.getElementById("contact-form").reset();
-    //     const toastLiveExample = document.getElementById("successToast");
-    //     const toast = new bootstrap.Toast(toastLiveExample);
-    //     toast.show();
-    //   },
-    //   error: function () {
-    //     const toastLiveExample = document.getElementById("unsuccessToast");
-    //     const toast = new bootstrap.Toast(toastLiveExample);
-    //     toast.show();
-    //   },
-    // });
+    var data = {
+      name: this.model.name,
+      email: this.model.email,
+      phone: this.model.phone,
+      type: this.model.type,
+      msg: this.model.message,
+    };
+    this.postForm(data)
+      .pipe(
+        catchError((err) => {
+          this.openSnackbar(
+            'Sajnos nem sikerült továbbítani az adatokat rajtunk kívül álló okok miatt. Kérlek írj nekünk az info@webvibes.hu email címre.',
+            false
+          );
+          return err;
+          // handle error
+        })
+      )
+      .subscribe((resp) => {
+        console.log(resp);
+        this.openSnackbar(
+          'Köszönjük, hogy kitöltötted! Hamarosan felvesszük veled a kapcsolatot!',
+          true
+        );
+      });
   }
 }

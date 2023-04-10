@@ -142,3 +142,19 @@ $typography-config-desktop: mat.define-typography-config(
     --mdc-snackbar-supporting-text-color: #313131;
   }
 }
+
+.mat-mdc-snack-bar-container {
+  &.contact-success-snackbar {
+    --mdc-snackbar-container-color: #7055d2;
+    // --mat-mdc-snack-bar-button-color: #856fd9;
+    --mdc-snackbar-supporting-text-color: white;
+  }
+}
+
+.mat-mdc-snack-bar-container {
+  &.contact-error-snackbar {
+    --mdc-snackbar-container-color: #ff5722;
+    // --mat-mdc-snack-bar-button-color: #856fd9;
+    --mdc-snackbar-supporting-text-color: #313131;
+  }
+}

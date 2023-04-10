@@ -116,3 +116,21 @@ body {
   padding-left: 15px !important;
   padding-right: 15px !important;
 }
+
+.contact-success-snackbar,
+.contact-error-snackbar {
+  margin: 0 !important;
+  position: fixed !important;
+  top: 25px !important;
+  border-radius: 30px !important;
+  color: white !important;
+}
+
+.contact-success-snackbar > div,
+.contact-error-snackbar > div {
+  border-radius: 20px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  position: fixed !important;
+  top: 50px !important;
+}

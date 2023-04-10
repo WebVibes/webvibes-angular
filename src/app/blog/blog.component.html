@@ -1,4 +1,11 @@
 <!-- Blog -->
+<ul class="heroes">
+  <li *ngFor="let blogPost of blogPosts">
+    <a routerLink="/blog-post/{{ blogPost.id }}">
+      <span class="badge">{{ blogPost.id }}</span> {{ blogPost.name }}
+    </a>
+  </li>
+</ul>
 <section id="blog">
   <div>
     <h1 class="blog-title">Blog</h1>

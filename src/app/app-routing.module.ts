@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { LogoComponent } from './logo/logo.component';
 import { WebdesignComponent } from './webdesign/webdesign.component';
 import { WebshopComponent } from './webshop/webshop.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'webshop', component: WebshopComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactPageComponent },
+  { path: 'blog-post/:id', component: BlogPostComponent },
   // { path: 'detail/:id', component: HeroDetailComponent },
   // { path: 'heroes', component: HeroesComponent },
   // { path: 'dashboard', component: DashboardComponent},

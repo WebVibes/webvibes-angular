@@ -23,6 +23,7 @@ import { HomeComponent } from './home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     ContactComponent,
     HomeComponent,
     FooterComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    BlogPostComponent
   ],
   imports: [
     BrowserAnimationsModule,

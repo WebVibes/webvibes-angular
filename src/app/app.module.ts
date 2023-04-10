@@ -20,6 +20,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { GyikComponent } from './gyik/gyik.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
     HomeComponent,
     FooterComponent,
     ContactPageComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    GyikComponent
   ],
   imports: [
     BrowserAnimationsModule,

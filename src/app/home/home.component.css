@@ -215,6 +215,12 @@ button {
 .gallery-image {
   margin-top: 20px;
   margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 20px;
 }
 .gallery-header {
   margin-bottom: 30px;
@@ -226,19 +232,31 @@ button {
 #gallery-page {
   margin-bottom: 100px;
 }
-.gallery img {
-  padding: 15px;
+.gallery-item {
+  height: 100%;
   width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
   cursor: pointer;
   box-shadow: 0px 10px 20px rgba(194, 194, 194, 0.25);
   height: 337px;
   object-fit: cover;
   object-position: 100% 0;
-  border-radius: 20px;
+
 }
-.gallery img:hover {
-  transition: all 0.3s ease-in-out;
-  padding: 5px;
+
+.gallery-image:hover .gallery-item,
+.gallery-image:focus .gallery-item {
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
 }
 #gallery-modal .modal-img {
   width: 100%;
@@ -315,34 +333,6 @@ button {
 }
 /* Kinek ajánljuk */
 
-/* gyik */
-.gyik-header {
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-details {
-  background: #ffffff;
-  padding: 20px 40px;
-  border-radius: 7px;
-  margin-top: 20px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  box-shadow: 0px 10px 20px rgba(194, 194, 194, 0.25);
-  border-radius: 20px;
-}
-details summary {
-  outline: none;
-  font-weight: bold;
-  color: #454545;
-}
-details p {
-  padding-top: 20px;
-  color: #727272;
-}
-/* gyik */
 
 /* blog */
 .blog a {
@@ -522,15 +512,6 @@ details p {
     color: #242424;
   }
   /* Kinek ajánljuk */
-
-  /* gyik */
-  .gyik-header {
-    margin-bottom: 30px;
-  }
-  #gyik > div {
-    margin-bottom: 20px;
-  }
-  /* gyik */
 
   /* blog */
 

@@ -7,6 +7,8 @@ import { LogoComponent } from './logo/logo.component';
 import { WebdesignComponent } from './webdesign/webdesign.component';
 import { WebshopComponent } from './webshop/webshop.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { ImpresszumComponent } from './impresszum/impresszum.component';
+import { AdatkezelesComponent } from './adatkezeles/adatkezeles.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,11 +17,12 @@ const routes: Routes = [
     component: HomeComponent,
     data: {
       title: 'Web Vibes - webdesign, webfejlesztés, webshop készítés',
+      ogTitle: 'Web Vibes - webdesign, webfejlesztés, webshop készítés',
       description:
         'Az online jelenlét kulcsfontosságú a versenyképesség megtartásában. Legyen szó logóról, weboldalról vagy webshopról segítünk a vállalkozásod digitális transzformációjában.',
-      // ogTitle: 'Title of Second A Component for social media',
-      // ogDescription: 'Description of Second A Component for social media',
-      // ogImage: 'ImagePathForSocialMedia'
+      ogDescription:
+        'Az online jelenlét kulcsfontosságú a versenyképesség megtartásában. Legyen szó logóról, weboldalról vagy webshopról segítünk a vállalkozásod digitális transzformációjában.',
+      // ogImage: 'ImagePathForSocialMedia' # TODO
     },
   },
   {
@@ -27,7 +30,10 @@ const routes: Routes = [
     component: WebdesignComponent,
     data: {
       title: 'Kiemelkedő, ügyfélszerző weboldal vállalkozásod számára',
+      ogTitle: 'Kiemelkedő, ügyfélszerző weboldal vállalkozásod számára',
       description:
+        'Erősítsd meg az online jelenléted egy korszerű és innovatív weboldallal.',
+      ogDescription:
         'Erősítsd meg az online jelenléted egy korszerű és innovatív weboldallal.',
     },
   },
@@ -36,7 +42,10 @@ const routes: Routes = [
     component: LogoComponent,
     data: {
       title: 'Egységes és elragadó arculat a vállalkozásod számára',
+      ogTitle: 'Egységes és elragadó arculat a vállalkozásod számára',
       description:
+        'Egy megnyerő arculattal és figyelemfelkeltő logóval hozzájárulhatsz a vállalkozásod növekedéséhez.',
+      ogDescription:
         'Egy megnyerő arculattal és figyelemfelkeltő logóval hozzájárulhatsz a vállalkozásod növekedéséhez.',
     },
   },
@@ -45,7 +54,10 @@ const routes: Routes = [
     component: WebshopComponent,
     data: {
       title: 'Webáruházak teljeskörű kivitelezése',
+      ogTitle: 'Webáruházak teljeskörű kivitelezése',
       description:
+        'Elkészítjük az egyedi webáruházad amellyel kitűnhetsz a versenytársaid közül.',
+      ogDescription:
         'Elkészítjük az egyedi webáruházad amellyel kitűnhetsz a versenytársaid közül.',
     },
   },
@@ -54,9 +66,9 @@ const routes: Routes = [
     component: BlogComponent,
     data: {
       title: 'Web Vibes blog',
-      // TODO
-      description:
-        'Az online jelenlét kulcsfontosságú a versenyképesség megtartásában. Legyen szó logóról, weboldalról vagy webshopról segítünk a vállalkozásod digitális transzformációjában.',
+      ogTitle: 'Web Vibes blog',
+      description: '', // TODO
+      ogDescription: '',
     },
   },
   {
@@ -64,7 +76,9 @@ const routes: Routes = [
     component: ContactPageComponent,
     data: {
       title: 'Kapcsolat',
+      ogTitle: 'Kapcsolat',
       description: 'Vedd fel velünk a kapcsolatot és dolgozzunk együtt.',
+      ogDescription: 'Vedd fel velünk a kapcsolatot és dolgozzunk együtt.',
     },
   },
   {
@@ -72,15 +86,37 @@ const routes: Routes = [
     component: BlogPostComponent,
     data: {
       title: 'Web Vibes blog',
-      // TODO
-      description:
-        'Az online jelenlét kulcsfontosságú a versenyképesség megtartásában. Legyen szó logóról, weboldalról vagy webshopról segítünk a vállalkozásod digitális transzformációjában.',
+      ogTitle: 'Web Vibes blog',
+      description: '', // TODO
+      ogDescription: '',
+    },
+  },
+  {
+    path: 'impresszum',
+    component: ImpresszumComponent,
+    data: {
+      title: 'Impresszum - Web Vibes',
+      ogTitle: 'Impresszum - Web Vibes',
+      description: 'Web Vibes impresszum',
+      ogDescription: 'Web Vibes impresszum',
+      robots: 'noindex, nofollow',
+    },
+  },
+  {
+    path: 'adatkezelesi-tajekoztato',
+    component: AdatkezelesComponent,
+    data: {
+      title: 'Adatkezelési tájékoztató - Web Vibes',
+      ogTitle: 'Adatkezelési tájékoztató - Web Vibes',
+      description: 'Web Vibes adatkezelési tájékoztató',
+      ogDescription: 'Web Vibes adatkezelési tájékoztató',
+      robots: 'noindex, nofollow',
     },
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

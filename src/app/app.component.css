@@ -56,14 +56,5 @@ h1.example-app-name {
 }
 
 .primary-button {
-  border-radius: 30px;
-  padding: 10px 25px;
-  transition: all 0.3s ease-in-out;
-  font-weight: 700;
-  margin-right: 10px !important;
-}
-.primary-button:hover {
-  transition: all 0.3s ease-in-out;
-  padding: 10px 30px;
-  margin-right: 0 !important;
+  margin-top: 25px;
 }

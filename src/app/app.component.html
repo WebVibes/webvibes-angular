@@ -15,7 +15,12 @@
       routerLink="/"
     />
     <span class="example-spacer"></span>
-    <button mat-button [matMenuTriggerFor]="menu" *ngIf="!mobileQuery.matches">
+    <button
+      id="menu-button"
+      mat-button
+      [matMenuTriggerFor]="menu"
+      *ngIf="!mobileQuery.matches"
+    >
       Szolgáltatásaink
     </button>
     <mat-menu #menu="matMenu">
@@ -25,10 +30,20 @@
       <button mat-menu-item routerLink="logo">Logó és arculat tervezés</button>
       <button mat-menu-item routerLink="webshop">Webshop készítés</button>
     </mat-menu>
-    <button routerLink="/" mat-button *ngIf="!mobileQuery.matches">
+    <button
+      id="menu-button"
+      routerLink="/"
+      mat-button
+      *ngIf="!mobileQuery.matches"
+    >
       Ingyenes segédlet
     </button>
-    <button routerLink="/blog" mat-button *ngIf="!mobileQuery.matches">
+    <button
+      id="menu-button"
+      routerLink="/blog"
+      mat-button
+      *ngIf="!mobileQuery.matches"
+    >
       Blog
     </button>
     <button

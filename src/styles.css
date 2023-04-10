@@ -51,14 +51,13 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Fira Sans", sans-serif;
   line-height: 1.2;
   color: #313131;
 }
 h1,
 h2 {
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 700;
   color: #313131;
 }
 p {
@@ -95,7 +94,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  /* font-family: Roboto, "Helvetica Neue", sans-serif; */
 }
 
 .my-custom-snackbar {
@@ -133,4 +132,32 @@ body {
   padding-right: 15px !important;
   position: fixed !important;
   top: 50px !important;
+}
+#menu-button {
+  color: #565656;
+}
+#menu-button:hover {
+  color: #7055d2;
+}
+button {
+  font-size: 16px;
+  font-family: "Fira Sans", sans-serif;
+  box-shadow: none !important;
+}
+/* mat-toolbar {
+  background: white !important;
+} */
+
+.primary-button {
+  border-radius: 30px !important;
+  padding: 10px 25px !important;
+  transition: all 0.3s ease-in-out !important;
+  font-weight: 600 !important;
+  margin-right: 10px !important;
+  height: 46px !important;
+}
+.primary-button:hover {
+  transition: all 0.3s ease-in-out !important;
+  padding: 10px 30px !important;
+  margin-right: 0 !important;
 }

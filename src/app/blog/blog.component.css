@@ -63,7 +63,6 @@ section > div {
   padding: 20px;
   margin: -30px 20px 0;
   position: relative;
-  height: 200px;
 }
 
 #blog h2 {
@@ -76,11 +75,11 @@ section > div {
   font-weight: 500;
   margin: 20px 10px;
   color: #313131;
+  font-weight: bold;
 }
 .blog-grid .blog-info h5 a {
   color: #313131;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .blog-card-header {

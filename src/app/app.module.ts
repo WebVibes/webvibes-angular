@@ -22,6 +22,9 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { GyikComponent } from './gyik/gyik.component';
 import { CookieService } from 'ngx-cookie-service';
+import { ImpresszumComponent } from './impresszum/impresszum.component';
+import { HostingTutorialComponent } from './hosting-tutorial/hosting-tutorial.component';
+import { AdatkezelesComponent } from './adatkezeles/adatkezeles.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { CookieService } from 'ngx-cookie-service';
     ContactPageComponent,
     BlogPostComponent,
     GyikComponent,
+    ImpresszumComponent,
+    HostingTutorialComponent,
+    AdatkezelesComponent,
   ],
   imports: [
     BrowserAnimationsModule,

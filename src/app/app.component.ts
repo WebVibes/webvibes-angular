@@ -58,6 +58,11 @@ export class AppComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.analyticsService.trackVirtualPageview(event.url);
+        // window.scroll({
+        //   top: 0,
+        //   left: 0,
+        //   behavior: 'smooth',
+        // });
       }
     });
     this.router.events

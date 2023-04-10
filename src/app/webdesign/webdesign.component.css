@@ -15,19 +15,9 @@ button {
   font-size: 16px !important;
 }
 .primary-button {
-  border-radius: 30px;
-  padding: 10px 25px;
-  transition: all 0.3s ease-in-out;
-  font-weight: 700;
-  margin-right: 10px;
   margin-top: 25px;
-  height: 46px;
 }
-.primary-button:hover {
-  transition: all 0.3s ease-in-out;
-  padding: 10px 30px;
-  margin-right: 0;
-}
+
 ul {
   padding-left: 0;
 }
@@ -93,12 +83,12 @@ li {
 }
 .work-card-title {
   margin-left: 20px;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 .work-card-title h3 {
   font-size: 1.3em;
   font-weight: 700;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .work-card-title h3,
 .work-card-description,

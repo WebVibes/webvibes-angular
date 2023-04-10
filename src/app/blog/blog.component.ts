@@ -19,7 +19,7 @@ export class BlogComponent {
 
   getBlogPosts(): void {
     this.blogService.getBlogPosts().subscribe((blogPosts) => {
-      this.blogPosts = blogPosts;
+      this.blogPosts = blogPosts.reverse();
       this.threePostsCount = Array.from(
         Array(Math.ceil(blogPosts.length / 3)).keys()
       );

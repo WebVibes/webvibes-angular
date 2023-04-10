@@ -14,19 +14,9 @@ section > div {
 button {
   font-size: 16px !important;
 }
+
 .primary-button {
-  border-radius: 30px;
-  padding: 10px 25px;
-  transition: all 0.3s ease-in-out;
-  font-weight: 700;
-  margin-right: 10px;
   margin-top: 25px;
-  height: 46px;
-}
-.primary-button:hover {
-  transition: all 0.3s ease-in-out;
-  padding: 10px 30px;
-  margin-right: 0;
 }
 
 /* Banner */
@@ -237,16 +227,15 @@ button {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-transition: all .5s;
-  -moz-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   cursor: pointer;
   box-shadow: 0px 10px 20px rgba(194, 194, 194, 0.25);
   height: 337px;
   object-fit: cover;
   object-position: 100% 0;
-
 }
 
 .gallery-image:hover .gallery-item,
@@ -332,7 +321,6 @@ button {
   color: white;
 }
 /* Kinek ajánljuk */
-
 
 /* blog */
 .blog a {

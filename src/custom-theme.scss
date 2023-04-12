@@ -90,41 +90,21 @@ $webvibes-angular-dark-theme: mat.define-dark-theme(
 
 $typography-config-mobile: mat.define-typography-config(
   $font-family: '"Fira Sans", sans-serif',
-  $headline-1:
-    mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
-  $headline-2:
-    mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
-  $headline-3:
-    mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
-  $headline-4: mat.define-typography-level(34px, 40px, 400),
-  $headline-5: mat.define-typography-level(50px, 50px, 700, 1, -0.01em),
-  $headline-6: mat.define-typography-level(40px, 40px, 700),
-  $subtitle-1: mat.define-typography-level(36px, 36px, 700),
-  $subtitle-2: mat.define-typography-level(32px, 32px, 600),
-  $body-1: mat.define-typography-level(16px, 24px, 400),
-  $body-2: mat.define-typography-level(16px, 24px, 400),
-  $caption: mat.define-typography-level(16px, 24px, 400),
+  $headline-5: mat.define-typography-level(36px, 36px, 700),
+  $headline-6: mat.define-typography-level(36px, 36px, 700),
+  $subtitle-1: mat.define-typography-level(35px, 35px, 500),
+  $subtitle-2: mat.define-typography-level(26px, 26px, 500),
   $button: mat.define-typography-level(16px, 24px, 400),
 );
 
 $typography-config-desktop: mat.define-typography-config(
   $font-family: '"Fira Sans", sans-serif',
-  $headline-1:
-    mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
-  $headline-2:
-    mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
-  $headline-3:
-    mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
-  $headline-4: mat.define-typography-level(34px, 40px, 400),
   $headline-5:
-    mat.define-typography-level(50px, 50px, 700, $letter-spacing: -0.01em),
-  $headline-6: mat.define-typography-level(40px, 40px, 700),
-  $subtitle-1: mat.define-typography-level(36px, 36px, 700),
-  $subtitle-2: mat.define-typography-level(32px, 32px, 600),
-  $body-1: mat.define-typography-level(16px, 24px, 400),
-  $body-2: mat.define-typography-level(16px, 24px, 400),
-  $caption: mat.define-typography-level(16px, 24px, 400),
-  $button: mat.define-typography-level(16px, 24px, 400),
+    mat.define-typography-level(50px, 50px, 700),
+  $headline-6: mat.define-typography-level(46px, 46px, 700),
+  $subtitle-1: mat.define-typography-level(35px, 35px, 500),
+  $subtitle-2: mat.define-typography-level(26px, 26px, 500),
+  $button: mat.define-typography-level(20px, 20px, 400),
 );
 
 @media only screen and (max-width: 768px) {
@@ -158,3 +138,4 @@ $typography-config-desktop: mat.define-typography-config(
     --mdc-snackbar-supporting-text-color: #313131;
   }
 }
+// sass src/main.scss dist/main.css --load-path=node_modules 

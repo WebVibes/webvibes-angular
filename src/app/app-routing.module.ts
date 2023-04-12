@@ -12,13 +12,12 @@ import { AdatkezelesComponent } from './adatkezeles/adatkezeles.component';
 import { HostingTutorialComponent } from './hosting-tutorial/hosting-tutorial.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path: 'home',
     component: HomeComponent,
     data: {
-      title: 'Web Vibes - webdesign, webfejlesztés, webshop készítés',
-      ogTitle: 'Web Vibes - webdesign, webfejlesztés, webshop készítés',
+      title: 'Web Vibes | webdesign, webfejlesztés, webshop készítés',
+      ogTitle: 'Web Vibes | webdesign, webfejlesztés, webshop készítés',
       description:
         'Az online jelenlét kulcsfontosságú a versenyképesség megtartásában. Legyen szó logóról, weboldalról vagy webshopról segítünk a vállalkozásod digitális transzformációjában.',
       ogDescription:
@@ -31,8 +30,8 @@ const routes: Routes = [
     path: 'webdesign',
     component: WebdesignComponent,
     data: {
-      title: 'Kiemelkedő, ügyfélszerző weboldal vállalkozásod számára',
-      ogTitle: 'Kiemelkedő, ügyfélszerző weboldal vállalkozásod számára',
+      title: 'Web Vibes | Kiemelkedő, ügyfélszerző weboldal vállalkozásod számára',
+      ogTitle: 'Web Vibes | Kiemelkedő, ügyfélszerző weboldal vállalkozásod számára',
       description:
         'Erősítsd meg az online jelenléted egy korszerű és innovatív weboldallal.',
       ogDescription:
@@ -44,8 +43,8 @@ const routes: Routes = [
     path: 'logo',
     component: LogoComponent,
     data: {
-      title: 'Egységes és elragadó arculat a vállalkozásod számára',
-      ogTitle: 'Egységes és elragadó arculat a vállalkozásod számára',
+      title: 'Web Vibes | Egységes és elragadó arculat a vállalkozásod számára',
+      ogTitle: 'Web Vibes | Egységes és elragadó arculat a vállalkozásod számára',
       description:
         'Egy megnyerő arculattal és figyelemfelkeltő logóval hozzájárulhatsz a vállalkozásod növekedéséhez.',
       ogDescription:
@@ -57,8 +56,8 @@ const routes: Routes = [
     path: 'webshop',
     component: WebshopComponent,
     data: {
-      title: 'Webáruházak teljeskörű kivitelezése',
-      ogTitle: 'Webáruházak teljeskörű kivitelezése',
+      title: 'Web Vibes | Webáruházak teljeskörű kivitelezése',
+      ogTitle: 'Web Vibes | Webáruházak teljeskörű kivitelezése',
       description:
         'Elkészítjük az egyedi webáruházad amellyel kitűnhetsz a versenytársaid közül.',
       ogDescription:
@@ -70,8 +69,8 @@ const routes: Routes = [
     path: 'blog',
     component: BlogComponent,
     data: {
-      title: 'Web Vibes blog',
-      ogTitle: 'Web Vibes blog',
+      title: 'Web Vibes | Blog',
+      ogTitle: 'Web Vibes | Blog',
       description: '', // TODO
       ogDescription: '',
       animation: 'BlogPage',
@@ -81,8 +80,8 @@ const routes: Routes = [
     path: 'contact',
     component: ContactPageComponent,
     data: {
-      title: 'Kapcsolat',
-      ogTitle: 'Kapcsolat',
+      title: 'Web Vibes | Kapcsolat',
+      ogTitle: 'Web Vibes | Kapcsolat',
       description: 'Vedd fel velünk a kapcsolatot és dolgozzunk együtt.',
       ogDescription: 'Vedd fel velünk a kapcsolatot és dolgozzunk együtt.',
       animation: 'ContactPage',
@@ -92,8 +91,8 @@ const routes: Routes = [
     path: 'blog/:slug',
     component: BlogPostComponent,
     data: {
-      title: 'Web Vibes blog',
-      ogTitle: 'Web Vibes blog',
+      title: 'Web Vibes | Blog',
+      ogTitle: 'Web Vibes | Blog',
       description: '', // TODO
       ogDescription: '',
       animation: 'BlogPostPage',
@@ -103,8 +102,8 @@ const routes: Routes = [
     path: 'impresszum',
     component: ImpresszumComponent,
     data: {
-      title: 'Impresszum - Web Vibes',
-      ogTitle: 'Impresszum - Web Vibes',
+      title: 'Web Vibes | Impresszum',
+      ogTitle: 'Web Vibes | Impresszum',
       description: 'Web Vibes impresszum',
       ogDescription: 'Web Vibes impresszum',
       robots: 'noindex, nofollow',
@@ -115,8 +114,8 @@ const routes: Routes = [
     path: 'adatkezelesi-tajekoztato',
     component: AdatkezelesComponent,
     data: {
-      title: 'Adatkezelési tájékoztató - Web Vibes',
-      ogTitle: 'Adatkezelési tájékoztató - Web Vibes',
+      title: 'Web Vibes | Adatkezelési tájékoztató',
+      ogTitle: 'Web Vibes | Adatkezelési tájékoztató',
       description: 'Web Vibes adatkezelési tájékoztató',
       ogDescription: 'Web Vibes adatkezelési tájékoztató',
       robots: 'noindex, nofollow',
@@ -127,13 +126,15 @@ const routes: Routes = [
     path: 'tarhely-segedlet',
     component: HostingTutorialComponent,
     data: {
-      title: 'Tárhely segédlet',
-      ogTitle: 'Tárhely segédlet',
+      title: 'Web Vibes | Tárhely segédlet',
+      ogTitle: 'Web Vibes | Tárhely segédlet',
       description: '', // TODO
       ogDescription: '',
       animation: 'TarhelyPage',
     },
   },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: HomeComponent },  // Wildcard route for a 404 page
 ];
 
 @NgModule({

@@ -77,34 +77,32 @@
         </div>
         <div class="side-blog">
           <h3>Nézd meg további bejegyzéseinket is</h3>
-          <div class="col-lg-12 lazy-load">
-            <a routerLink="/blog/{{ randomBlogPost?.slug }}">
-              <div class="blog-grid">
-                <div class="blog-img">
-                  <img
-                    class="blog-banner"
-                    src="{{ randomBlogPost?.thumbnale }}"
-                    alt="mi az a brief?"
-                  />
-                </div>
+          <a routerLink="/blog/{{ randomBlogPost?.slug }}">
+            <div class="blog-grid">
+              <div class="blog-img">
+                <img
+                  class="blog-banner"
+                  src="{{ randomBlogPost?.thumbnale }}"
+                  alt="mi az a brief?"
+                />
+              </div>
 
-                <div class="blog-date">
-                  <p>{{ randomBlogPost?.date }}</p>
-                </div>
-                <h5>{{ randomBlogPost?.title }}</h5>
-                <div class="blog-card-header">
-                  <img
-                    src="/assets/img/date.svg"
-                    class="blog-card-img"
-                    alt="óra"
-                  />
-                  <div class="blog-card-title">
-                    <p>{{ randomBlogPost?.readMinutes }} perc</p>
-                  </div>
+              <div class="blog-date">
+                <p>{{ randomBlogPost?.date }}</p>
+              </div>
+              <h5>{{ randomBlogPost?.title }}</h5>
+              <div class="blog-card-header">
+                <img
+                  src="/assets/img/date.svg"
+                  class="blog-card-img"
+                  alt="óra"
+                />
+                <div class="blog-card-title">
+                  <p>{{ randomBlogPost?.readMinutes }} perc</p>
                 </div>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
           <div class="blog-button-container">
             <button
               id="blog-button"

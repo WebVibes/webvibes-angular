@@ -53,7 +53,7 @@
       color="primary"
       *ngIf="!mobileQuery.matches"
     >
-      Csináljuk
+      Ajánlatkérés
     </button>
     <button
       mat-icon-button
@@ -81,12 +81,14 @@
         <a mat-list-item routerLink="logo">Logó és arculat tervezés</a>
         <a mat-list-item routerLink="webshop">Webshop készítés</a>
         <a mat-list-item routerLink="blog">Blog</a>
-        <a mat-list-item routerLink="contact">Kapcsolat</a>
+        <a mat-list-item routerLink="contact">Ajánlatkérés</a>
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <router-outlet></router-outlet>
+      <div [@routeAnimations]="getRouteAnimationData()">
+        <router-outlet></router-outlet>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

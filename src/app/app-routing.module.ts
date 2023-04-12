@@ -24,6 +24,7 @@ const routes: Routes = [
       ogDescription:
         'Az online jelenlét kulcsfontosságú a versenyképesség megtartásában. Legyen szó logóról, weboldalról vagy webshopról segítünk a vállalkozásod digitális transzformációjában.',
       // ogImage: 'ImagePathForSocialMedia' # TODO
+      animation: 'HomePage',
     },
   },
   {
@@ -36,6 +37,7 @@ const routes: Routes = [
         'Erősítsd meg az online jelenléted egy korszerű és innovatív weboldallal.',
       ogDescription:
         'Erősítsd meg az online jelenléted egy korszerű és innovatív weboldallal.',
+      animation: 'WebDesignPage',
     },
   },
   {
@@ -48,6 +50,7 @@ const routes: Routes = [
         'Egy megnyerő arculattal és figyelemfelkeltő logóval hozzájárulhatsz a vállalkozásod növekedéséhez.',
       ogDescription:
         'Egy megnyerő arculattal és figyelemfelkeltő logóval hozzájárulhatsz a vállalkozásod növekedéséhez.',
+      animation: 'LogoPage',
     },
   },
   {
@@ -60,6 +63,7 @@ const routes: Routes = [
         'Elkészítjük az egyedi webáruházad amellyel kitűnhetsz a versenytársaid közül.',
       ogDescription:
         'Elkészítjük az egyedi webáruházad amellyel kitűnhetsz a versenytársaid közül.',
+      animation: 'WebshopPage',
     },
   },
   {
@@ -70,6 +74,7 @@ const routes: Routes = [
       ogTitle: 'Web Vibes blog',
       description: '', // TODO
       ogDescription: '',
+      animation: 'BlogPage',
     },
   },
   {
@@ -80,6 +85,7 @@ const routes: Routes = [
       ogTitle: 'Kapcsolat',
       description: 'Vedd fel velünk a kapcsolatot és dolgozzunk együtt.',
       ogDescription: 'Vedd fel velünk a kapcsolatot és dolgozzunk együtt.',
+      animation: 'ContactPage',
     },
   },
   {
@@ -90,6 +96,7 @@ const routes: Routes = [
       ogTitle: 'Web Vibes blog',
       description: '', // TODO
       ogDescription: '',
+      animation: 'BlogPostPage',
     },
   },
   {
@@ -101,6 +108,7 @@ const routes: Routes = [
       description: 'Web Vibes impresszum',
       ogDescription: 'Web Vibes impresszum',
       robots: 'noindex, nofollow',
+      animation: 'ImpresszumPage',
     },
   },
   {
@@ -112,6 +120,7 @@ const routes: Routes = [
       description: 'Web Vibes adatkezelési tájékoztató',
       ogDescription: 'Web Vibes adatkezelési tájékoztató',
       robots: 'noindex, nofollow',
+      animation: 'AdatkezelesPage',
     },
   },
   {
@@ -122,6 +131,7 @@ const routes: Routes = [
       ogTitle: 'Tárhely segédlet',
       description: '', // TODO
       ogDescription: '',
+      animation: 'TarhelyPage',
     },
   },
 ];

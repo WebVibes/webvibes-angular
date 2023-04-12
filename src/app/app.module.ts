@@ -25,6 +25,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { ImpresszumComponent } from './impresszum/impresszum.component';
 import { HostingTutorialComponent } from './hosting-tutorial/hosting-tutorial.component';
 import { AdatkezelesComponent } from './adatkezeles/adatkezeles.component';
+import { ObserveVisibilityDirective } from './observe-visibility.directive';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { AdatkezelesComponent } from './adatkezeles/adatkezeles.component';
     ImpresszumComponent,
     HostingTutorialComponent,
     AdatkezelesComponent,
+    ObserveVisibilityDirective,
   ],
   imports: [
     BrowserAnimationsModule,

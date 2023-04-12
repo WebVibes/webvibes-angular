@@ -1,18 +1,25 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import {
+  ActivatedRoute,
+  ChildrenOutletContexts,
+  NavigationEnd,
+  Router,
+} from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { AnalyticsService } from './analytics.service';
 import { CookieService } from 'ngx-cookie-service';
 import { Subscription } from 'rxjs';
 import { MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 import { BLOGPOSTS } from './blog-posts';
+import { slideInAnimation } from './animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
+  animations: [slideInAnimation],
 })
 export class AppComponent {
   title = 'Tour of heroes';
@@ -32,7 +39,8 @@ export class AppComponent {
     private titleService: Title,
     private analyticsService: AnalyticsService,
     private cookieService: CookieService,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    private contexts: ChildrenOutletContexts
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -155,6 +163,12 @@ export class AppComponent {
     } else {
       return activatedRoute;
     }
+  }
+
+  getRouteAnimationData() {
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.[
+      'animation'
+    ];
   }
 
   ngOnDestroy(): void {

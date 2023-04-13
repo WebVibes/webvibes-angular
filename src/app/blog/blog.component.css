@@ -18,8 +18,8 @@ section > div {
   text-align: center;
 }
 #blog {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 
 .blog-date {
@@ -99,9 +99,6 @@ section > div {
   color: #3a3973;
   font-size: 16px;
 }
-.blog-title {
-  padding-top: 50px;
-}
 
 .blog-grid .blog-info:hover {
   box-shadow: 0px 2px 20px 5px rgba(146, 62, 255, 0.38);
@@ -120,7 +117,7 @@ section > div {
     padding: 0;
   }
   .blog-title {
-    padding-top: 80px;
+    padding-top: 50px;
   }
   #blog {
     padding-top: 0px;
@@ -145,5 +142,15 @@ section > div {
   }
   #blog h2 {
     margin: 0 0 40px 0;
+  }
+}
+
+/* 600 pixel alatt */
+@media only screen and (max-width: 600px) {
+  section > div {
+    margin: 30px 10px;
+  }
+  .blog-title {
+    padding-top: 10px;
   }
 }

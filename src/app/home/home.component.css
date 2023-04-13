@@ -183,16 +183,12 @@ button {
   font-weight: 700;
 }
 .work-card-title h3,
-.work-card-description,
+.work-card-description p,
 .work h1 {
-  color: white;
-}
-.work-card-description p {
   color: #e6e6e6;
 }
-.work-card-description p {
-  font-size: 1em;
-  font-weight: 400;
+.work-card-title h3 {
+  margin: auto;
 }
 .work-card-img {
   height: 40%;
@@ -498,6 +494,9 @@ button {
   }
   .offer-text > h1 {
     color: #242424;
+  }
+  .offer > div {
+    margin: 15px;
   }
   /* Kinek ajánljuk */
 

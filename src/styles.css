@@ -98,10 +98,11 @@ body {
 }
 
 .my-custom-snackbar {
-  margin: 0 !important;
+  margin: 20px !important;
   position: fixed !important;
   bottom: 20px !important;
   border-radius: 30px !important;
+  max-width: calc(100% - 40px);
 }
 
 .my-custom-snackbar button {
@@ -114,6 +115,13 @@ body {
   border-radius: 20px !important;
   padding-left: 15px !important;
   padding-right: 15px !important;
+}
+
+/* 600 pixel alatt */
+@media only screen and (max-width: 600px) {
+  .my-custom-snackbar {
+    bottom: 0 !important;
+  }
 }
 
 .contact-success-snackbar,
